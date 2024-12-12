@@ -1,0 +1,25 @@
+spring:
+    application:
+        name: JetDevsTest
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password:
+        url: jdbc:mysql://localhost:3306/JetDevs?useSSL=false&serverTimezone=UTC
+        username: root
+    flyway:
+        baseline-on-migrate: true
+        enabled: true
+        locations: classpath:/db/migration
+        out-of-order: false
+        validate-on-migrate: true
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
+    servlet:
+        multipart:
+            max-file-size: 10MB
+            max-request-size: 10MB
+springfox:
+    documentation:
+        swagger-ui:
+            base-url: /swagger-ui.html
